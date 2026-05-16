@@ -1,0 +1,88 @@
+PODS:
+  - AnyCodable-FlightSchool (0.6.7)
+  - Clarity (3.3.3)
+  - ClearQuoteSDK (0.1.1):
+    - AnyCodable-FlightSchool
+    - Clarity
+    - DropDown
+    - Fuse
+    - IQKeyboardManagerSwift (= 6.5.16)
+    - Kingfisher (= 7.12.0)
+    - ReachabilitySwift
+    - Sentry (= 8.46.0)
+    - SQLite.swift
+    - SVGKit
+    - TensorFlowLiteSwift (~> 0.0.1-nightly)
+  - CocoaLumberjack (3.9.0):
+    - CocoaLumberjack/Core (= 3.9.0)
+  - CocoaLumberjack/Core (3.9.0)
+  - DropDown (2.3.13)
+  - Fuse (1.4.0)
+  - IQKeyboardManagerSwift (6.5.16)
+  - Kingfisher (7.12.0)
+  - ReachabilitySwift (5.2.4)
+  - Sentry (8.46.0):
+    - Sentry/Core (= 8.46.0)
+  - Sentry/Core (8.46.0)
+  - SQLite.swift (0.15.4):
+    - SQLite.swift/standard (= 0.15.4)
+  - SQLite.swift/standard (0.15.4)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
+  - TensorFlowLiteC (0.0.1-nightly.20250619):
+    - TensorFlowLiteC/Core (= 0.0.1-nightly.20250619)
+  - TensorFlowLiteC/Core (0.0.1-nightly.20250619)
+  - TensorFlowLiteSwift (0.0.1-nightly.20250619):
+    - TensorFlowLiteSwift/Core (= 0.0.1-nightly.20250619)
+  - TensorFlowLiteSwift/Core (0.0.1-nightly.20250619):
+    - TensorFlowLiteC (= 0.0.1-nightly.20250619)
+    - TensorFlowLiteSwift/Privacy (= 0.0.1-nightly.20250619)
+  - TensorFlowLiteSwift/Privacy (0.0.1-nightly.20250619)
+
+DEPENDENCIES:
+  - ClearQuoteSDK (from `https://github.com/clearquotetech/cq-ios-sdk.git`)
+
+SPEC REPOS:
+  trunk:
+    - AnyCodable-FlightSchool
+    - Clarity
+    - CocoaLumberjack
+    - DropDown
+    - Fuse
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - ReachabilitySwift
+    - Sentry
+    - SQLite.swift
+    - SVGKit
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
+
+EXTERNAL SOURCES:
+  ClearQuoteSDK:
+    :git: https://github.com/clearquotetech/cq-ios-sdk.git
+
+CHECKOUT OPTIONS:
+  ClearQuoteSDK:
+    :commit: 356f366eb3220cba6a7e06b9b1961fd23cefe0cb
+    :git: https://github.com/clearquotetech/cq-ios-sdk.git
+
+SPEC CHECKSUMS:
+  AnyCodable-FlightSchool: 261cbe76757802b17d471b9059b21e6fa5edf57b
+  Clarity: 9c93e8c23794a9a1dff63933cd6003144cf3f755
+  ClearQuoteSDK: 4fb675b9584817250f4015ee910a3524b1e244d5
+  CocoaLumberjack: 5644158777912b7de7469fa881f8a3f259c2512a
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  Fuse: 48eaf66d0c407c7f8b0ddb168888dc4637e87f14
+  IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
+  Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
+  ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
+  Sentry: da60d980b197a46db0b35ea12cb8f39af48d8854
+  SQLite.swift: a107c734115fea616a4ad31371d39f1637e8de56
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
+  TensorFlowLiteC: 215ef57653dd0fa09a474e7d94d79ae64a870b28
+  TensorFlowLiteSwift: 6de8da348de331778167a0f751ad74c41d8b0554
+
+PODFILE CHECKSUM: 369ab8e4728c61c989a48608fb59292d7723f8d2
+
+COCOAPODS: 1.16.2
