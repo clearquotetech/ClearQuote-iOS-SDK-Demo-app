@@ -96,8 +96,8 @@
 				A4BD74EE2FB85C150047D12C /* Sources */,
 				A4BD74EF2FB85C150047D12C /* Frameworks */,
 				A4BD74F02FB85C150047D12C /* Resources */,
-				01FFC49A5F31C28BB50B6C00 /* [CP] Embed Pods Frameworks */,
-				923CFC886F135D09BB6D8C0B /* [CP] Copy Pods Resources */,
+				B1F502B55257B0CE90CCDBDC /* [CP] Embed Pods Frameworks */,
+				BD56D75527CCB430F85BED4F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,27 +156,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01FFC49A5F31C28BB50B6C00 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7390BC303958853B11EB9681 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,7 +178,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		923CFC886F135D09BB6D8C0B /* [CP] Copy Pods Resources */ = {
+		B1F502B55257B0CE90CCDBDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD56D75527CCB430F85BED4F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,13 +203,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -240,10 +232,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = 42NU87XF89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "ClearQuote Demo need camera access to capture vehicle images";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -251,12 +244,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clearquote.CQ-iOS-SDK-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -276,10 +270,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 29;
 				DEVELOPMENT_TEAM = 42NU87XF89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "ClearQuote Demo need camera access to capture vehicle images";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -287,12 +282,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clearquote.CQ-iOS-SDK-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;

@@ -15,9 +15,6 @@ class SDKInitializationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-#if DEBUG
-        ipSdkKey.text = "ef6b384f-00f5-4034-976b-7ace1fc38d99.cquat"
-#endif
     }
     
     @IBAction private func onClickSaveBtn() {

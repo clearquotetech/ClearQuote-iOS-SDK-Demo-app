@@ -48,11 +48,6 @@ class StartInspectionViewController: UIViewController {
         
         // Setup View
         setupView()
-
-        #if DEBUG
-        ipUserName.text = "tegdealeradmin"
-        ipDealer.text = "TEG_Integration"
-        #endif
     }
     
     private func setupView() {
