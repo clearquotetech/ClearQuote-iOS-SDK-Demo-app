@@ -63,3 +63,4 @@ fastlane/test_output
 /Pods
 buildServer.json
 /build
+Podfile.lock
