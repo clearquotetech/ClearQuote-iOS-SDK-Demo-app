@@ -22,6 +22,9 @@ class SplashScreenViewController: UIViewController {
             deadline: .now() + 1.0,
             execute: {
                 if (ClearQuote.shared.isCQSDKInitialized()) {
+                    if ClearQuote.shared.bodystyleVerificationEnabled {
+                        ClearQuote.shared.refreshVehicles()
+                    }
                     UIUtils.shared.navigateTo(
                         classRef: self,
                         storyBoard: Storyboards.main.asStoryBoard(),

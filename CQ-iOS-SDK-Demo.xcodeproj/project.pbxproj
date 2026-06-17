@@ -236,6 +236,7 @@
 				DEVELOPMENT_TEAM = 42NU87XF89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ClearQuote Demo need camera access to capture vehicle images";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
@@ -244,7 +245,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -274,6 +274,7 @@
 				DEVELOPMENT_TEAM = 42NU87XF89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ClearQuote Demo need camera access to capture vehicle images";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
@@ -282,7 +283,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

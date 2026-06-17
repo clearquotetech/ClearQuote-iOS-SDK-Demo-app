@@ -36,6 +36,9 @@ class SDKDemoAppMainViewController: UIViewController {
     private func checkSdkInitStatus() {
         // SDK is initialized already
         if (ClearQuote.shared.isCQSDKInitialized()) {
+            if ClearQuote.shared.bodystyleVerificationEnabled {
+                ClearQuote.shared.refreshVehicles()
+            }
             // Navigate to start inspection page
             UIUtils.shared.navigateTo(
                 classRef: self,
