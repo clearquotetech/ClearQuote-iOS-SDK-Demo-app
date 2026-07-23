@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lz-UU-ykM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lz-UU-ykM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Iy7-lR-rqT">
-                                <rect key="frame" x="0.0" y="118" width="393" height="89"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="89"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter SDK key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAB-dW-rNP">
                                         <rect key="frame" x="16" y="0.0" width="361" height="34"/>
@@ -188,7 +188,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hm-e5-aw8">
-                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="758.99999999999977"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8zg-EQ-boR">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1440"/>
@@ -200,14 +200,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0S7-gQ-v4r" customClass="DividerView" customModule="CQ_iOS_SDK_Demo" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="36.333333333333343" width="361" height="2"/>
+                                                <rect key="frame" x="16" y="36.333333333333329" width="361" height="2"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="0XS-da-1Ky"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client Attributes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpU-Ov-s90">
-                                                <rect key="frame" x="16" y="48.333333333333343" width="361" height="20.333333333333329"/>
+                                                <rect key="frame" x="16" y="48.333333333333329" width="361" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -228,7 +228,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Dealer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jke-1c-GrT">
-                                                <rect key="frame" x="16" y="150.66666666666669" width="361" height="50"/>
+                                                <rect key="frame" x="16" y="150.66666666666666" width="361" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="a9c-Cp-N7f"/>
                                                 </constraints>
@@ -251,8 +251,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Organisation ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="org-ID-fld">
+                                                <rect key="frame" x="16" y="330.66666666666669" width="361" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="org-ID-hgt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igV-ck-U7i" customClass="DividerView" customModule="CQ_iOS_SDK_Demo" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="330.66666666666669" width="361" height="2"/>
+                                                <rect key="frame" x="16" y="390.66666666666669" width="361" height="2"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="6P9-hE-6hi"/>
@@ -496,6 +504,7 @@
                     <connections>
                         <outlet property="ipBodyStyle" destination="LZB-ZK-UzH" id="iJs-4B-Jbk"/>
                         <outlet property="ipClientUniqueId" destination="kcT-18-kPM" id="lzd-ow-JWn"/>
+                        <outlet property="ipOrganisationID" destination="org-ID-fld" id="org-ID-out"/>
                         <outlet property="ipCustomerEmail" destination="zLh-0O-1hj" id="P7T-vc-HSl"/>
                         <outlet property="ipCustomerName" destination="irw-Oq-P0B" id="GP7-Vm-7jv"/>
                         <outlet property="ipDealer" destination="Jke-1c-GrT" id="HZ9-cm-Nsz"/>
@@ -525,10 +534,10 @@
         <!--Navigation Controller-->
         <scene sceneID="4C1-HW-0z1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2lz-UU-ykM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2lz-UU-ykM" customClass="SDKDemoRootNavigationController" customModule="CQ_iOS_SDK_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ksJ-5P-AY0">
-                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -539,6 +548,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddY-Fl-28A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="154.96183206106869" y="3.5211267605633805"/>
+        </scene>
+        <!--Demo Celarity View Controller-->
+        <scene sceneID="MMG-XS-0RS">
+            <objects>
+                <viewController id="f3y-o4-Ahf" customClass="SDKDemoCelarityViewController" customModule="CQ_iOS_SDK_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wh3-2Q-A2f">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XSu-4Z-rA8">
+                                <rect key="frame" x="16" y="699" width="361" height="103"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pt-nm-scu">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Initialize"/>
+                                        <connections>
+                                            <action selector="initializeSDK" destination="f3y-o4-Ahf" eventType="touchUpInside" id="QNf-wi-y70"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeR-up-wce">
+                                        <rect key="frame" x="0.0" y="34.333333333333371" width="361" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Online Flow"/>
+                                        <connections>
+                                            <action selector="onlineInspection" destination="f3y-o4-Ahf" eventType="touchUpInside" id="9mR-I7-Xom"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4G-wY-Pef">
+                                        <rect key="frame" x="0.0" y="68.666666666666629" width="361" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Offline Flow"/>
+                                        <connections>
+                                            <action selector="offlineInspection" destination="f3y-o4-Ahf" eventType="touchUpInside" id="N9z-qE-Wb5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QQF-v3-voc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QQF-v3-voc" firstAttribute="trailing" secondItem="XSu-4Z-rA8" secondAttribute="trailing" constant="16" id="9vm-qM-LY7"/>
+                            <constraint firstItem="XSu-4Z-rA8" firstAttribute="leading" secondItem="QQF-v3-voc" secondAttribute="leading" constant="16" id="UQh-RM-DCL"/>
+                            <constraint firstItem="QQF-v3-voc" firstAttribute="bottom" secondItem="XSu-4Z-rA8" secondAttribute="bottom" constant="16" id="tuO-2i-yac"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acU-fY-eNm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="801"/>
         </scene>
     </scenes>
     <resources>
@@ -553,7 +613,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.2196078431372549" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

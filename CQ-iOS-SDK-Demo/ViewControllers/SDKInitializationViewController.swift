@@ -8,7 +8,7 @@
 import UIKit
 import ClearQuoteSDK
 
-class SDKInitializationViewController: UIViewController {
+class SDKInitializationViewController: SDKDemoBaseViewController {
 
     @IBOutlet weak var ipSdkKey: UITextField!
     

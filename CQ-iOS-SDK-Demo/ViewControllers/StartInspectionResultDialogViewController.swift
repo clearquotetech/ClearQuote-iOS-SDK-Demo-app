@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class StartInspectionResultDialogViewController: UIViewController {
+class StartInspectionResultDialogViewController: SDKDemoBaseViewController {
     @IBOutlet private weak var lb1: UILabel!
     @IBOutlet private weak var lb2: UILabel!
     @IBOutlet private weak var lb3: UILabel!
