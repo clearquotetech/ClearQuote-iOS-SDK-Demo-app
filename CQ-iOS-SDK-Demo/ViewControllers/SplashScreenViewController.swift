@@ -8,7 +8,7 @@
 import UIKit
 import ClearQuoteSDK
 
-class SplashScreenViewController: UIViewController {
+class SplashScreenViewController: SDKDemoBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,7 @@ class SplashScreenViewController: UIViewController {
                     if ClearQuote.shared.bodystyleVerificationEnabled {
                         ClearQuote.shared.refreshVehicles()
                     }
+                    
                     UIUtils.shared.navigateTo(
                         classRef: self,
                         storyBoard: Storyboards.main.asStoryBoard(),

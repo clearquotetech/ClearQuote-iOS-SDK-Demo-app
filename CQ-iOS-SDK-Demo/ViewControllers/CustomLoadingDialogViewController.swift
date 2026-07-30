@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import ClearQuoteSDK
 
-class CustomLoadingDialogViewController: UIViewController{
+class CustomLoadingDialogViewController: SDKDemoBaseViewController {
     @IBOutlet weak var lbMessage: UILabel!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var vwContainer: UIView!

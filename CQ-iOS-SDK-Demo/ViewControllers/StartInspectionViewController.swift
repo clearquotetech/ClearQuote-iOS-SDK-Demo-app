@@ -8,13 +8,14 @@
 import UIKit
 import ClearQuoteSDK
 
-class StartInspectionViewController: UIViewController {
+class StartInspectionViewController: SDKDemoBaseViewController {
     // Outlets
     // Client attrs
     @IBOutlet private weak var ipUserName: UITextField!
     @IBOutlet private weak var ipDealer: UITextField!
     @IBOutlet private weak var ipDealerIdentifier: UITextField!
     @IBOutlet private weak var ipClientUniqueId: UITextField!
+    @IBOutlet private weak var ipOrganisationID: UITextField!
     
     // Input details
     @IBOutlet private weak var ipRegNumber: UITextField!
@@ -73,27 +74,19 @@ class StartInspectionViewController: UIViewController {
         ipPhoneNumber.keyboardType = .phonePad
         ipDialCode.keyboardType = .phonePad
     }
-    
-    /*
-     * MARK: Execute if switch mode is change
-     */
-    @IBAction private func onChangeOfflineSwitchValue(_ sender: UISwitch) {
-        ClearQuote.shared.isOffline = sender.isOn
-        isOffline = ClearQuote.shared.isOffline
-    }
-    
-    // Actions
-    @IBAction private func onClickBtnStartInspection() {
-        // Create client attrs
-        let clientAttrs = CQSDKClientAttrs(
-            userName: ipUserName.text ?? "",
-            dealer: ipDealer.text ?? "",
-            dealerIdentifier: ipDealerIdentifier.text ?? "",
-            client_unique_id: ipClientUniqueId.text ?? ""
+
+    private func makeClientAttrs() -> CQSDKClientAttrs {
+        return CQSDKClientAttrs(
+            userName: ipUserName.text,
+            dealer: ipDealer.text,
+            dealerIdentifier: ipDealerIdentifier.text,
+            client_unique_id: ipClientUniqueId.text,
+            organisationId: ipOrganisationID.text
         )
-        
-        // Create input details
-        let inputDetails = CQSDKInputDetails(
+    }
+
+    private func makeInputDetails() -> CQSDKInputDetails {
+        CQSDKInputDetails(
             customerDetails: CQSDKCustomerDetails(
                 name: ipCustomerName.text ?? "",
                 email: ipCustomerEmail.text ?? "",
@@ -113,158 +106,68 @@ class StartInspectionViewController: UIViewController {
                 fleetImageType: ipFleetImageType.text ?? ""
             )
         )
-        
-        // Start inspection
+    }
+
+    private func presentInspectionResultDialog(
+        inspectionStarted: Bool,
+        message: String,
+        code: Int
+    ) {
+        guard !inspectionStarted else { return }
+        UIUtils.shared.openInspectionResultDialog(
+            baseVC: self,
+            t1: "Inspection Started : \(inspectionStarted)",
+            t2: "Message : \(message)",
+            t3: "Code : \(code)"
+        )
+    }
+    
+    /*
+     * MARK: Execute if switch mode is change
+     */
+    @IBAction private func onChangeOfflineSwitchValue(_ sender: UISwitch) {
+        ClearQuote.shared.isOffline = sender.isOn
+        isOffline = ClearQuote.shared.isOffline
+    }
+    
+    // Actions
+    @IBAction private func onClickBtnStartInspection() {
         ClearQuote.shared.startInspection(
             baseVC: self,
             clearQuoteSdkDelegate: self,
-            clientAttrs: clientAttrs,
-            inputDetails: inputDetails,
+            clientAttrs: makeClientAttrs(),
+            inputDetails: makeInputDetails(),
             userFlowParams: nil,
-            result: { inspectionStarted, message, code in
-                if (!inspectionStarted) {
-                    // Get labels
-                    let t1 = "Inspection Started : \(inspectionStarted)"
-                    let t2 = "Message : \(message)"
-                    let t3 = "Code : \(code)"
-                    
-                    // Open the dialog
-                    UIUtils.shared.openInspectionResultDialog(
-                        baseVC: self,
-                        t1: t1,
-                        t2: t2,
-                        t3: t3
-                    )
-                }
+            result: { [weak self] inspectionStarted, message, code in
+                self?.presentInspectionResultDialog(
+                    inspectionStarted: inspectionStarted,
+                    message: message,
+                    code: code
+                )
             }
         )
     }
     
     @IBAction private func onClickBtnStartInspectionSkipInput() {
-        if isOffline {
-            // Create client attrs
-            let clientAttrs = CQSDKClientAttrs(
-                userName: ipUserName.text ?? "",
-                dealer: ipDealer.text ?? "",
-                dealerIdentifier: ipDealerIdentifier.text ?? "",
-                client_unique_id: ipClientUniqueId.text ?? ""
-            )
-            
-            // Create input details
-            let inputDetails = CQSDKInputDetails(
-                customerDetails: CQSDKCustomerDetails(
-                    name: ipCustomerName.text ?? "",
-                    email: ipCustomerEmail.text ?? "",
-                    dialCode: ipDialCode.text ?? "",
-                    phoneNumber: ipPhoneNumber.text ?? ""
-                ),
-                vehicleDetails: CQSDKVehicleDetails(
-                    regNumber: ipRegNumber.text?.trimmingCharacters(in: .whitespaces) ?? "",
-                    make: ipMake.text ?? "",
-                    model: ipModel.text ?? "",
-                    bodyStyle: ipBodyStyle.text ?? "",
-                    fuelType: ipFuelType.text ?? "",
-                    variant: ipVariant.text ?? ""
-                ),
-                quoteData: CQSDKQuoteData(
-                    inspectionType: ipInspectionType.text ?? "",
-                    fleetImageType: ipFleetImageType.text ?? ""
+        let userFlowParams = CQSDKUserFlowParams(
+            isOffline: isOffline,
+            skipInputPage: true
+        )
+
+        ClearQuote.shared.startInspection(
+            baseVC: self,
+            clearQuoteSdkDelegate: self,
+            clientAttrs: makeClientAttrs(),
+            inputDetails: makeInputDetails(),
+            userFlowParams: userFlowParams,
+            result: { [weak self] inspectionStarted, message, code in
+                self?.presentInspectionResultDialog(
+                    inspectionStarted: inspectionStarted,
+                    message: message,
+                    code: code
                 )
-            )
-            
-            // Create user flow params
-            let userFlowParams = CQSDKUserFlowParams(
-                isOffline: true,
-                skipInputPage: true
-            )
-            
-            // Start inspection
-            ClearQuote.shared.startInspection(
-                baseVC: self,
-                clearQuoteSdkDelegate: self,
-                clientAttrs: clientAttrs,
-                inputDetails: inputDetails,
-                userFlowParams: userFlowParams,
-                result: { inspectionStarted, message, code in
-                    if (!inspectionStarted) {
-                        // Get labels
-                        let t1 = "Inspection Started : \(inspectionStarted)"
-                        let t2 = "Message : \(message)"
-                        let t3 = "Code : \(code)"
-                        
-                        // Open the dialog
-                        UIUtils.shared.openInspectionResultDialog(
-                            baseVC: self,
-                            t1: t1,
-                            t2: t2,
-                            t3: t3
-                        )
-                    }
-                }
-            )
-            
-        } else {
-            // Create client attrs
-            let clientAttrs = CQSDKClientAttrs(
-                userName: ipUserName.text ?? "",
-                dealer: ipDealer.text ?? "",
-                dealerIdentifier: ipDealerIdentifier.text ?? "",
-                client_unique_id: ipClientUniqueId.text ?? ""
-            )
-            
-            // Create input details
-            let inputDetails = CQSDKInputDetails(
-                customerDetails: CQSDKCustomerDetails(
-                    name: ipCustomerName.text ?? "",
-                    email: ipCustomerEmail.text ?? "",
-                    dialCode: ipDialCode.text ?? "",
-                    phoneNumber: ipPhoneNumber.text ?? ""
-                ),
-                vehicleDetails: CQSDKVehicleDetails(
-                    regNumber: ipRegNumber.text?.trimmingCharacters(in: .whitespaces) ?? "",
-                    make: ipMake.text ?? "",
-                    model: ipModel.text ?? "",
-                    bodyStyle: ipBodyStyle.text ?? "",
-                    fuelType: ipFuelType.text ?? "",
-                    variant: ipVariant.text ?? ""
-                ),
-                quoteData: CQSDKQuoteData(
-                    inspectionType: ipInspectionType.text ?? "",
-                    fleetImageType: ipFleetImageType.text ?? ""
-                )
-            )
-            
-            // Create user flow params
-            let userFlowParams = CQSDKUserFlowParams(
-                isOffline: false,
-                skipInputPage: true
-            )
-            
-            // Start inspection
-            ClearQuote.shared.startInspection(
-                baseVC: self,
-                clearQuoteSdkDelegate: self,
-                clientAttrs: clientAttrs,
-                inputDetails: inputDetails,
-                userFlowParams: userFlowParams,
-                result: { inspectionStarted, message, code in
-                    if (!inspectionStarted) {
-                        // Get labels
-                        let t1 = "Inspection Started : \(inspectionStarted)"
-                        let t2 = "Message : \(message)"
-                        let t3 = "Code : \(code)"
-                        
-                        // Open the dialog
-                        UIUtils.shared.openInspectionResultDialog(
-                            baseVC: self,
-                            t1: t1,
-                            t2: t2,
-                            t3: t3
-                        )
-                    }
-                }
-            )
-        }
+            }
+        )
     }
     
     @IBAction private func onClickBtnManualSync() {
