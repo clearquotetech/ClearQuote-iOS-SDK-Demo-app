@@ -31,10 +31,6 @@ playground.xcworkspace
 
 .build/
 
-# CocoaPods
-Pods/
-Podfile.lock
-
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
@@ -55,3 +51,4 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 buildServer.json
 /build
+/.vscode
