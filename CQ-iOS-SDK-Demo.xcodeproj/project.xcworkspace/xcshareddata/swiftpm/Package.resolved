@@ -33,8 +33,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/clearquotetech/cq-ios-sdk.git",
       "state" : {
-        "branch" : "SD/SCRUM-765-swift-package-manager",
-        "revision" : "7fcbe27190a9c15ea6d892421c72ddee3394d458"
+        "revision" : "6b3efe8771f7180994891ac9c1601221810705ab"
       }
     },
     {
@@ -95,8 +94,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/getsentry/sentry-cocoa.git",
       "state" : {
-        "revision" : "f196cbb98e0388381d57908f2f5a9bdc385cde68",
-        "version" : "8.58.4"
+        "revision" : "d3562ee73e56a7b0b8319ec613db3c529924f07a",
+        "version" : "9.19.1"
       }
     },
     {

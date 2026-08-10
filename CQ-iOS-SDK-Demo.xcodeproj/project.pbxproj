@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		6246C314C59A546668C8B495 /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C5BAF7B3DE8536F13DB05F /* MetalPerformanceShaders.framework */; };
 		81DED846EC435A85B722E2F6 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16149265B5193D3033EDD981 /* CoreML.framework */; };
+		A4CB29213029DF6E0047C41A /* ClearQuoteSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A4CB29203029DF6E0047C41A /* ClearQuoteSDK */; };
 		B781CA23F8EC6DBB4AA6DD58 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C4ADAA7E148DDCF692A1242A /* IQKeyboardManagerSwift */; };
 		FEF91C2DD9FE2990772E5EED /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5030A200A178DCF048C2413 /* Accelerate.framework */; };
-		FF0006EC08B1F7B30964EBF9 /* ClearQuoteSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 80416CF8CE75251DC0DBE256 /* ClearQuoteSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,9 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF0006EC08B1F7B30964EBF9 /* ClearQuoteSDK in Frameworks */,
 				B781CA23F8EC6DBB4AA6DD58 /* IQKeyboardManagerSwift in Frameworks */,
 				81DED846EC435A85B722E2F6 /* CoreML.framework in Frameworks */,
+				A4CB29213029DF6E0047C41A /* ClearQuoteSDK in Frameworks */,
 				6246C314C59A546668C8B495 /* MetalPerformanceShaders.framework in Frameworks */,
 				FEF91C2DD9FE2990772E5EED /* Accelerate.framework in Frameworks */,
 			);
@@ -105,8 +105,8 @@
 			);
 			name = "CQ-iOS-SDK-Demo";
 			packageProductDependencies = (
-				80416CF8CE75251DC0DBE256 /* ClearQuoteSDK */,
 				C4ADAA7E148DDCF692A1242A /* IQKeyboardManagerSwift */,
+				A4CB29203029DF6E0047C41A /* ClearQuoteSDK */,
 			);
 			productName = "CQ-iOS-SDK-Demo";
 			productReference = A4BD74F22FB85C150047D12C /* CQ-iOS-SDK-Demo.app */;
@@ -137,7 +137,7 @@
 			mainGroup = A4BD74E92FB85C150047D12C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				FB50AEFC15EBC18A3E3D40B2 /* XCRemoteSwiftPackageReference "cq-ios-sdk" */,
+				A4CB291F3029DF6E0047C41A /* XCRemoteSwiftPackageReference "cq-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A4BD74F32FB85C150047D12C /* Products */;
@@ -176,7 +176,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 42NU87XF89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
@@ -194,7 +194,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clearquote.CQ-iOS-SDK-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -213,7 +213,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 42NU87XF89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
@@ -231,7 +231,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clearquote.CQ-iOS-SDK-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -389,20 +389,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FB50AEFC15EBC18A3E3D40B2 /* XCRemoteSwiftPackageReference "cq-ios-sdk" */ = {
+		A4CB291F3029DF6E0047C41A /* XCRemoteSwiftPackageReference "cq-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/clearquotetech/cq-ios-sdk.git";
 			requirement = {
-				branch = "SD/SCRUM-765-swift-package-manager";
-				kind = branch;
+				kind = revision;
+				revision = 6b3efe8771f7180994891ac9c1601221810705ab;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		80416CF8CE75251DC0DBE256 /* ClearQuoteSDK */ = {
+		A4CB29203029DF6E0047C41A /* ClearQuoteSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FB50AEFC15EBC18A3E3D40B2 /* XCRemoteSwiftPackageReference "cq-ios-sdk" */;
+			package = A4CB291F3029DF6E0047C41A /* XCRemoteSwiftPackageReference "cq-ios-sdk" */;
 			productName = ClearQuoteSDK;
 		};
 		C4ADAA7E148DDCF692A1242A /* IQKeyboardManagerSwift */ = {
