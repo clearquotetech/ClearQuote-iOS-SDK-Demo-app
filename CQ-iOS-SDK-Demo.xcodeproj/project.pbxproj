@@ -95,6 +95,7 @@
 				A4BD74EE2FB85C150047D12C /* Sources */,
 				A4BD74EF2FB85C150047D12C /* Frameworks */,
 				A4BD74F02FB85C150047D12C /* Resources */,
+				A4E1F0012FB9A0010047D12C /* Fix TensorFlowLite Info.plists */,
 			);
 			buildRules = (
 			);
@@ -158,6 +159,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4E1F0012FB9A0010047D12C /* Fix TensorFlowLite Info.plists */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Fix TensorFlowLite Info.plists";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# kewlbear/TensorFlowLiteC binary frameworks omit App Store-required Info.plist keys.\n# Patches SPM artifacts + embedded copies so validation (ITMS-90057 / ITMS-90530) succeeds.\nset -euo pipefail\n\nVERSION=\"1.0.0\"\nMIN_OS=\"${IPHONEOS_DEPLOYMENT_TARGET}\"\n\npatch_plist() {\n  plist=\"$1\"\n  if [ ! -f \"${plist}\" ]; then\n    return 0\n  fi\n\n  if /usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"${plist}\" >/dev/null 2>&1; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${VERSION}\" \"${plist}\"\n  else\n    /usr/libexec/PlistBuddy -c \"Add :CFBundleShortVersionString string ${VERSION}\" \"${plist}\"\n  fi\n\n  if /usr/libexec/PlistBuddy -c \"Print :MinimumOSVersion\" \"${plist}\" >/dev/null 2>&1; then\n    /usr/libexec/PlistBuddy -c \"Set :MinimumOSVersion ${MIN_OS}\" \"${plist}\"\n  else\n    /usr/libexec/PlistBuddy -c \"Add :MinimumOSVersion string ${MIN_OS}\" \"${plist}\"\n  fi\n\n  echo \"Patched ${plist}\"\n}\n\n# 1) Patch SourcePackages artifacts so future embeds already have valid keys.\nDERIVED_DATA_ROOT=\"${BUILD_DIR%%/Build/*}\"\nARTIFACTS_ROOT=\"${DERIVED_DATA_ROOT}/SourcePackages/artifacts/tensorflowlitec\"\nif [ -d \"${ARTIFACTS_ROOT}\" ]; then\n  find \"${ARTIFACTS_ROOT}\" -path \"*/TensorFlowLiteC*.framework/Info.plist\" | while IFS= read -r plist; do\n    patch_plist \"${plist}\"\n  done\nelse\n  echo \"note: TensorFlowLiteC SPM artifacts not found at ${ARTIFACTS_ROOT}\"\nfi\n\n# 2) Patch (and re-sign) frameworks already embedded in the app bundle.\nFRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nif [ -d \"${FRAMEWORKS_DIR}\" ]; then\n  for name in TensorFlowLiteC TensorFlowLiteCMetal TensorFlowLiteCCoreML; do\n    fw=\"${FRAMEWORKS_DIR}/${name}.framework\"\n    patch_plist \"${fw}/Info.plist\"\n    if [ -d \"${fw}\" ] && [ -n \"${EXPANDED_CODE_SIGN_IDENTITY:-}\" ] && [ \"${EXPANDED_CODE_SIGN_IDENTITY}\" != \"-\" ] && [ \"${CODE_SIGNING_ALLOWED:-YES}\" != \"NO\" ]; then\n      /usr/bin/codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" --preserve-metadata=identifier,entitlements,flags --timestamp=none \"${fw}\"\n    fi\n  done\nelse\n  echo \"note: Frameworks directory not found at ${FRAMEWORKS_DIR}; skipping embedded patch\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4BD74EE2FB85C150047D12C /* Sources */ = {
@@ -282,7 +306,7 @@
 				DEVELOPMENT_TEAM = 45CV8LCGCF;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -346,7 +370,7 @@
 				DEVELOPMENT_TEAM = 45CV8LCGCF;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
