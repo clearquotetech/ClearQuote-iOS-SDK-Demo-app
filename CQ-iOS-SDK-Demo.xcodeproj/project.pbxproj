@@ -200,11 +200,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 42NU87XF89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "ClearQuote Demo need camera access to capture vehicle images";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
@@ -237,11 +238,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 42NU87XF89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "ClearQuote Demo need camera access to capture vehicle images";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
@@ -418,7 +420,7 @@
 			repositoryURL = "https://github.com/clearquotetech/cq-ios-sdk.git";
 			requirement = {
 				kind = revision;
-				revision = d984ad92522150fe74ad37d5b8e4166ae39d0509;
+				revision = ce9c67d5ef53fc5cb64fe8117faa675383131dd5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
