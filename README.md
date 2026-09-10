@@ -17,9 +17,6 @@ For ClearQuoteSDK integration details, see the [integration guide](https://docs.
    cd ClearQuote-iOS-SDK-Demo-app
    ```
 
-2. Install dependencies with CocoaPods:
-   ```bash
-   pod install
-   ```
+2. Open `CQ-iOS-SDK-Demo.xcodeproj` in Xcode. Swift Package Manager will resolve `ClearQuoteSDK` automatically.
 
-3. Open `CQ-iOS-SDK-Demo.xcworkspace` in Xcode, select your iPhone as the run destination, and build and run the app.
+3. Select your iPhone as the run destination, then build and run the app.

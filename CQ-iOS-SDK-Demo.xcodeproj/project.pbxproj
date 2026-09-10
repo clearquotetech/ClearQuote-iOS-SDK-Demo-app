@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		389C0D8EB1B02509C80C912F /* Pods_CQ_iOS_SDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481A9984C91ADC152421FA45 /* Pods_CQ_iOS_SDK_Demo.framework */; };
+		6246C314C59A546668C8B495 /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C5BAF7B3DE8536F13DB05F /* MetalPerformanceShaders.framework */; };
+		81DED846EC435A85B722E2F6 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16149265B5193D3033EDD981 /* CoreML.framework */; };
+		A4CB29213029DF6E0047C41A /* ClearQuoteSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A4CB29203029DF6E0047C41A /* ClearQuoteSDK */; };
+		B781CA23F8EC6DBB4AA6DD58 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C4ADAA7E148DDCF692A1242A /* IQKeyboardManagerSwift */; };
+		FEF91C2DD9FE2990772E5EED /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5030A200A178DCF048C2413 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		31F34A198F89E5C1EFEC325A /* Pods-CQ-iOS-SDK-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQ-iOS-SDK-Demo.debug.xcconfig"; path = "Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		481A9984C91ADC152421FA45 /* Pods_CQ_iOS_SDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CQ_iOS_SDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C5BAF7B3DE8536F13DB05F /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
+		16149265B5193D3033EDD981 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		A4BD74F22FB85C150047D12C /* CQ-iOS-SDK-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CQ-iOS-SDK-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2AB9F07C4E32A09A1D453EF /* Pods-CQ-iOS-SDK-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CQ-iOS-SDK-Demo.release.xcconfig"; path = "Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		A5030A200A178DCF048C2413 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -43,20 +47,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				389C0D8EB1B02509C80C912F /* Pods_CQ_iOS_SDK_Demo.framework in Frameworks */,
+				B781CA23F8EC6DBB4AA6DD58 /* IQKeyboardManagerSwift in Frameworks */,
+				81DED846EC435A85B722E2F6 /* CoreML.framework in Frameworks */,
+				A4CB29213029DF6E0047C41A /* ClearQuoteSDK in Frameworks */,
+				6246C314C59A546668C8B495 /* MetalPerformanceShaders.framework in Frameworks */,
+				FEF91C2DD9FE2990772E5EED /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4329D8AE68D6234CDB0F2F94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16149265B5193D3033EDD981 /* CoreML.framework */,
+				07C5BAF7B3DE8536F13DB05F /* MetalPerformanceShaders.framework */,
+				A5030A200A178DCF048C2413 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4BD74E92FB85C150047D12C = {
 			isa = PBXGroup;
 			children = (
 				A4BD74F42FB85C150047D12C /* CQ-iOS-SDK-Demo */,
 				A4BD74F32FB85C150047D12C /* Products */,
-				C1F94BE8369EB8DF3BAE00E8 /* Pods */,
-				E75CA4E3F3EDCE7ED20DF4CE /* Frameworks */,
+				4329D8AE68D6234CDB0F2F94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,23 +85,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C1F94BE8369EB8DF3BAE00E8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				31F34A198F89E5C1EFEC325A /* Pods-CQ-iOS-SDK-Demo.debug.xcconfig */,
-				F2AB9F07C4E32A09A1D453EF /* Pods-CQ-iOS-SDK-Demo.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		E75CA4E3F3EDCE7ED20DF4CE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				481A9984C91ADC152421FA45 /* Pods_CQ_iOS_SDK_Demo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,12 +92,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4BD75052FB85C160047D12C /* Build configuration list for PBXNativeTarget "CQ-iOS-SDK-Demo" */;
 			buildPhases = (
-				7390BC303958853B11EB9681 /* [CP] Check Pods Manifest.lock */,
 				A4BD74EE2FB85C150047D12C /* Sources */,
 				A4BD74EF2FB85C150047D12C /* Frameworks */,
 				A4BD74F02FB85C150047D12C /* Resources */,
-				B1F502B55257B0CE90CCDBDC /* [CP] Embed Pods Frameworks */,
-				BD56D75527CCB430F85BED4F /* [CP] Copy Pods Resources */,
+				A4E1F0012FB9A0010047D12C /* Fix TensorFlowLite Info.plists */,
 			);
 			buildRules = (
 			);
@@ -107,6 +105,10 @@
 				A4BD74F42FB85C150047D12C /* CQ-iOS-SDK-Demo */,
 			);
 			name = "CQ-iOS-SDK-Demo";
+			packageProductDependencies = (
+				C4ADAA7E148DDCF692A1242A /* IQKeyboardManagerSwift */,
+				A4CB29203029DF6E0047C41A /* ClearQuoteSDK */,
+			);
 			productName = "CQ-iOS-SDK-Demo";
 			productReference = A4BD74F22FB85C150047D12C /* CQ-iOS-SDK-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +137,9 @@
 			);
 			mainGroup = A4BD74E92FB85C150047D12C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A4CB291F3029DF6E0047C41A /* XCRemoteSwiftPackageReference "cq-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A4BD74F32FB85C150047D12C /* Products */;
 			projectDirPath = "";
@@ -156,68 +161,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7390BC303958853B11EB9681 /* [CP] Check Pods Manifest.lock */ = {
+		A4E1F0012FB9A0010047D12C /* Fix TensorFlowLite Info.plists */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "Fix TensorFlowLite Info.plists";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CQ-iOS-SDK-Demo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1F502B55257B0CE90CCDBDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD56D75527CCB430F85BED4F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CQ-iOS-SDK-Demo/Pods-CQ-iOS-SDK-Demo-resources.sh\"\n";
+			shellScript = "# kewlbear/TensorFlowLiteC binary frameworks omit App Store-required Info.plist keys.\n# Patches SPM artifacts + embedded copies so validation (ITMS-90057 / ITMS-90530) succeeds.\nset -euo pipefail\n\nVERSION=\"1.0.0\"\nMIN_OS=\"${IPHONEOS_DEPLOYMENT_TARGET}\"\n\npatch_plist() {\n  plist=\"$1\"\n  if [ ! -f \"${plist}\" ]; then\n    return 0\n  fi\n\n  if /usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"${plist}\" >/dev/null 2>&1; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${VERSION}\" \"${plist}\"\n  else\n    /usr/libexec/PlistBuddy -c \"Add :CFBundleShortVersionString string ${VERSION}\" \"${plist}\"\n  fi\n\n  if /usr/libexec/PlistBuddy -c \"Print :MinimumOSVersion\" \"${plist}\" >/dev/null 2>&1; then\n    /usr/libexec/PlistBuddy -c \"Set :MinimumOSVersion ${MIN_OS}\" \"${plist}\"\n  else\n    /usr/libexec/PlistBuddy -c \"Add :MinimumOSVersion string ${MIN_OS}\" \"${plist}\"\n  fi\n\n  echo \"Patched ${plist}\"\n}\n\n# 1) Patch SourcePackages artifacts so future embeds already have valid keys.\nDERIVED_DATA_ROOT=\"${BUILD_DIR%%/Build/*}\"\nARTIFACTS_ROOT=\"${DERIVED_DATA_ROOT}/SourcePackages/artifacts/tensorflowlitec\"\nif [ -d \"${ARTIFACTS_ROOT}\" ]; then\n  find \"${ARTIFACTS_ROOT}\" -path \"*/TensorFlowLiteC*.framework/Info.plist\" | while IFS= read -r plist; do\n    patch_plist \"${plist}\"\n  done\nelse\n  echo \"note: TensorFlowLiteC SPM artifacts not found at ${ARTIFACTS_ROOT}\"\nfi\n\n# 2) Patch (and re-sign) frameworks already embedded in the app bundle.\nFRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nif [ -d \"${FRAMEWORKS_DIR}\" ]; then\n  for name in TensorFlowLiteC TensorFlowLiteCMetal TensorFlowLiteCCoreML; do\n    fw=\"${FRAMEWORKS_DIR}/${name}.framework\"\n    patch_plist \"${fw}/Info.plist\"\n    if [ -d \"${fw}\" ] && [ -n \"${EXPANDED_CODE_SIGN_IDENTITY:-}\" ] && [ \"${EXPANDED_CODE_SIGN_IDENTITY}\" != \"-\" ] && [ \"${CODE_SIGNING_ALLOWED:-YES}\" != \"NO\" ]; then\n      /usr/bin/codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" --preserve-metadata=identifier,entitlements,flags --timestamp=none \"${fw}\"\n    fi\n  done\nelse\n  echo \"note: Frameworks directory not found at ${FRAMEWORKS_DIR}; skipping embedded patch\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -235,16 +196,17 @@
 /* Begin XCBuildConfiguration section */
 		A4BD75062FB85C160047D12C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31F34A198F89E5C1EFEC325A /* Pods-CQ-iOS-SDK-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
-				DEVELOPMENT_TEAM = 42NU87XF89;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87A82WYPZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "ClearQuote Demo need camera access to capture vehicle images";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
@@ -253,14 +215,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clearquote.CQ-iOS-SDK-Demo";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clearquote.cq-sdk-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -273,16 +236,17 @@
 		};
 		A4BD75072FB85C160047D12C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2AB9F07C4E32A09A1D453EF /* Pods-CQ-iOS-SDK-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
-				DEVELOPMENT_TEAM = 42NU87XF89;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87A82WYPZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "ClearQuote Demo need camera access to capture vehicle images";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ClearQuote needs your location while using the app to capture inspection locations and sync your inspections";
@@ -291,14 +255,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clearquote.CQ-iOS-SDK-Demo";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clearquote.cq-sdk-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -347,7 +312,7 @@
 				DEVELOPMENT_TEAM = 45CV8LCGCF;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -411,7 +376,7 @@
 				DEVELOPMENT_TEAM = 45CV8LCGCF;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -452,6 +417,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4CB291F3029DF6E0047C41A /* XCRemoteSwiftPackageReference "cq-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clearquotetech/cq-ios-sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4CB29203029DF6E0047C41A /* ClearQuoteSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4CB291F3029DF6E0047C41A /* XCRemoteSwiftPackageReference "cq-ios-sdk" */;
+			productName = ClearQuoteSDK;
+		};
+		C4ADAA7E148DDCF692A1242A /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4BD74EA2FB85C150047D12C /* Project object */;
 }
