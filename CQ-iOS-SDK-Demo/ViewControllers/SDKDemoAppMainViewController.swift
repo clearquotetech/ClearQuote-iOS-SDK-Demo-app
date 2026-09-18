@@ -43,7 +43,7 @@ class SDKDemoAppMainViewController: SDKDemoBaseViewController {
             UIUtils.shared.navigateTo(
                 classRef: self,
                 storyBoard: Storyboards.main.asStoryBoard(),
-                viewControllerId: ViewControllers.StartInspectionViewController.rawValue
+                viewControllerId: ViewControllers.SDKInputViewController.rawValue
             )
         }
     }

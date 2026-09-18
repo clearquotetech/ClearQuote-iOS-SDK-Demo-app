@@ -29,7 +29,7 @@ class SplashScreenViewController: SDKDemoBaseViewController {
                     UIUtils.shared.navigateTo(
                         classRef: self,
                         storyBoard: Storyboards.main.asStoryBoard(),
-                        viewControllerId: ViewControllers.StartInspectionViewController.rawValue
+                        viewControllerId: ViewControllers.SDKInputViewController.rawValue
                     )
                 } else {
                     UIUtils.shared.navigateTo(

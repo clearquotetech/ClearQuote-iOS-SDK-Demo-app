@@ -11,6 +11,7 @@ import Foundation
 enum ViewControllers: String {
     case SDKDemoAppMainViewController = "SDKDemoAppMainViewController"
     case SDKInitializationViewController = "SDKInitializationViewController"
+    case SDKInputViewController = "SDKInputViewController"
     case StartInspectionViewController = "StartInspectionViewController"
     case CustomLoadingDialogViewController = "CustomLoadingDialogViewController"
     case StartInspectionResultDialogViewController = "StartInspectionResultDialogViewController"

@@ -6,12 +6,12 @@
 //
 
 import UIKit
-import Kingfisher
+internal import Kingfisher
 import SVGKit
 
-public struct SVGImgProcessor:ImageProcessor {
-    public var identifier: String = "com.appidentifier.webpprocessor"
-    public func process(item: ImageProcessItem, options: KingfisherParsedOptionsInfo) -> KFCrossPlatformImage? {
+internal struct SVGImgProcessor: ImageProcessor {
+    var identifier: String = "com.appidentifier.webpprocessor"
+    func process(item: ImageProcessItem, options: KingfisherParsedOptionsInfo) -> KFCrossPlatformImage? {
         switch item {
         case .image(let image):
             print("already an image")
