@@ -2,11 +2,11 @@
 
 A demo app with [ClearQuoteSDK](https://github.com/clearquotetech/cq-ios-sdk) integrated.
 
-For ClearQuoteSDK integration details, see the [integration guide](https://docs.google.com/document/d/1eqHUg3L7mqA4E8vqslzpLoqoC_8qxv7wTUn_JneKQmY/edit?usp=sharing).
+For the ClearQuoteSDK integration document, see [ClearQuote Native iOS SDK Integration Guide](<ClearQuote Native IOS SDK Integration guide.pdf>).
 
 ## Requirements
 
-- **Xcode 16 or above**
+- **Xcode 27 or above**
 - **An iPhone device** (physical device required to run the app)
 
 ## Steps to Run
