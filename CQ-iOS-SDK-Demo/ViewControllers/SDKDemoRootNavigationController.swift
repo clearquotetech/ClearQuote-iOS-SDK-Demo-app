@@ -6,9 +6,6 @@
 import UIKit
 
 final class SDKDemoRootNavigationController: UINavigationController {
-    override var shouldAutorotate: Bool {
-        false
-    }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         .portrait

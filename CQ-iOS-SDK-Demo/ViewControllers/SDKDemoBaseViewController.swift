@@ -6,9 +6,6 @@
 import UIKit
 
 class SDKDemoBaseViewController: UIViewController {
-    override var shouldAutorotate: Bool {
-        false
-    }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         .portrait

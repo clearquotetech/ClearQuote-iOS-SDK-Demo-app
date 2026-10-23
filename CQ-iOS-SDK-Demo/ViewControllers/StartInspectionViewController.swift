@@ -21,6 +21,7 @@ class StartInspectionViewController: SDKDemoBaseViewController {
     @IBOutlet private weak var ipRegNumber: UITextField!
     @IBOutlet private weak var ipMake: UITextField!
     @IBOutlet private weak var ipModel: UITextField!
+    @IBOutlet private weak var ipVIN: UITextField!
     @IBOutlet private weak var ipBodyStyle: UITextField!
     @IBOutlet private weak var ipVariant: UITextField!
     @IBOutlet private weak var ipFuelType: UITextField!
@@ -97,6 +98,7 @@ class StartInspectionViewController: SDKDemoBaseViewController {
                 regNumber: ipRegNumber.text?.trimmingCharacters(in: .whitespaces) ?? "",
                 make: ipMake.text ?? "",
                 model: ipModel.text ?? "",
+                vin: ipVIN.text ?? "",
                 bodyStyle: ipBodyStyle.text ?? "",
                 fuelType: ipFuelType.text ?? "",
                 variant: ipVariant.text ?? ""
