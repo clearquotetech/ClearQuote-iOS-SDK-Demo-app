@@ -201,7 +201,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 87A82WYPZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
@@ -241,7 +241,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 87A82WYPZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CQ-iOS-SDK-Demo/Info.plist";
@@ -424,7 +424,7 @@
 			repositoryURL = "https://github.com/clearquotetech/cq-ios-sdk.git";
 			requirement = {
 				kind = revision;
-				revision = 7ab313ed40a4dd024162ffe128ccea9fe641eaf5 /* v0.2.0-beta.1 */;
+				revision = 7ab313ed40a4dd024162ffe128ccea9fe641eaf5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
