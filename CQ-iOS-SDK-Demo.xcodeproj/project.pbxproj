@@ -423,8 +423,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/clearquotetech/cq-ios-sdk.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = revision;
+				revision = 7ab313ed40a4dd024162ffe128ccea9fe641eaf5 /* v0.2.0-beta.1 */;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
