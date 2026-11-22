@@ -15,7 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/clearquotetech/cq-ios-sdk.git",
       "state" : {
-        "revision" : "e99717995ac188fdf46efddfb2050872d5c0e5e2"
+        "revision" : "a7302709b28397bae0592e142a86b84deb8c357b",
+        "version" : "0.2.0-alpha.5"
       }
     },
     {
@@ -133,23 +134,6 @@
       "state" : {
         "revision" : "a878e7f8f46cfc0e1125e565b5c08e7d5272dc9a",
         "version" : "1.14.0"
-      }
-    },
-    {
-      "identity" : "tensorflowlitec",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kewlbear/TensorFlowLiteC.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "d4cb1f268ce037754cda9a291e6b31091e1b9912"
-      }
-    },
-    {
-      "identity" : "tensorflowliteswift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kewlbear/TensorFlowLiteSwift.git",
-      "state" : {
-        "revision" : "bb9bd9c7c86e882f17aaf8bac35e96c77264eee2"
       }
     }
   ],
