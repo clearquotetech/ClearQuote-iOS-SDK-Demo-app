@@ -87,7 +87,6 @@
 				A4BD74EE2FB85C150047D12C /* Sources */,
 				A4BD74EF2FB85C150047D12C /* Frameworks */,
 				A4BD74F02FB85C150047D12C /* Resources */,
-				A4BD75A12FB85C160047D12C /* Stamp CQSDK Swift Version */,
 			);
 			buildRules = (
 			);
@@ -151,28 +150,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		A4BD75A12FB85C160047D12C /* Stamp CQSDK Swift Version */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Stamp CQSDK Swift Version";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Reads the Swift compiler version of the resolved ClearQuoteSDK binary and writes it to the built app's Info.plist as CQSDKSwiftVersion.\nPLIST=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nARTIFACTS=\"${BUILD_DIR%/Build/*}/SourcePackages/artifacts\"\nINTERFACE=$(find \"$ARTIFACTS\" -path \"*/ClearQuoteSDK.framework/Modules/ClearQuoteSDK.swiftmodule/*\" -name \"*.swiftinterface\" ! -name \"*.private.swiftinterface\" ! -name \"._*\" 2>/dev/null | head -n 1)\nSDK_SWIFT_VERSION=\"\"\nif [ -n \"$INTERFACE\" ]; then\n  SDK_SWIFT_VERSION=$(awk '$2 == \"swift-compiler-version:\" {print $6; exit}' \"$INTERFACE\")\nfi\nSDK_SWIFT_VERSION=${SDK_SWIFT_VERSION:-Unknown}\n/usr/libexec/PlistBuddy -c \"Set :CQSDKSwiftVersion $SDK_SWIFT_VERSION\" \"$PLIST\" 2>/dev/null || /usr/libexec/PlistBuddy -c \"Add :CQSDKSwiftVersion string $SDK_SWIFT_VERSION\" \"$PLIST\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		A4BD74EE2FB85C150047D12C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -191,6 +168,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CQ_SDK_SWIFT_VERSION = 6.3.3;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 87A82WYPZS;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -231,6 +209,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CQ_SDK_SWIFT_VERSION = 6.3.3;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 87A82WYPZS;
 				GENERATE_INFOPLIST_FILE = YES;
