@@ -29,8 +29,9 @@ class SDKDemoAppMainViewController: SDKDemoBaseViewController {
         // Set demo app version
         lbDemoAppVersion.text = "Demo App version: \(Utils.shared.getAppVersion())"
 
-        // Set SDK version
-        lbCQSDKVersion.text = "CQ SDK Version: \(ClearQuote.shared.getCurrentSDKVersion())"
+        // Set SDK version and the Swift toolchain it was built with (stamped into Info.plist at build time)
+        let sdkSwiftVersion = Bundle.main.object(forInfoDictionaryKey: "CQSDKSwiftVersion") as? String ?? "Unknown"
+        lbCQSDKVersion.text = "CQ SDK Version: \(ClearQuote.shared.getCurrentSDKVersion()) (Swift toolchain: \(sdkSwiftVersion))"
     }
 
     private func checkSdkInitStatus() {
